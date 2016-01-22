@@ -29,10 +29,10 @@
     return this.each(function(){
       var el = $(this)
       var array = [];
-      $.each(el.text().split(settings.separator), function(key, value) { 
+      $.each(el.html().split(settings.separator), function(key, value) { 
         array.push(value); 
       });
-      el.text(array[0]);
+      el.html(array[0]);
       
       // animation option
       var rotate = function() {
@@ -42,9 +42,9 @@
               textShadowBlur:20,
               opacity: 0
             }, 500 , function() {
-              index = $.inArray(el.text(), array)
+              index = $.inArray(el.html(), array)
               if((index + 1) == array.length) index = -1
-              el.text(array[index + 1]).animate({
+              el.html(array[index + 1]).animate({
                 textShadowBlur:0,
                 opacity: 1
               }, 500 );
@@ -56,7 +56,7 @@
               el.html(el.find(".back").html())
             }
           
-            var initial = el.text()
+            var initial = el.html()
             var index = $.inArray(initial, array)
             if((index + 1) == array.length) index = -1
             
@@ -77,7 +77,7 @@
               el.html(el.find(".back").html())
             }
           
-            var initial = el.text()
+            var initial = el.html()
             var index = $.inArray(initial, array)
             if((index + 1) == array.length) index = -1
             
@@ -98,7 +98,7 @@
               el.html(el.find(".back").html())
             }
           
-            var initial = el.text()
+            var initial = el.html()
             var index = $.inArray(initial, array)
             if((index + 1) == array.length) index = -1
             
@@ -119,7 +119,7 @@
               el.html(el.find(".back").html())
             }
           
-            var initial = el.text()
+            var initial = el.html()
             var index = $.inArray(initial, array)
             if((index + 1) == array.length) index = -1
             
@@ -139,10 +139,10 @@
             if(el.find(".rotating").length > 0) {
               el.html(el.find(".rotating").html())
             }
-            index = $.inArray(el.text(), array)
+            index = $.inArray(el.html(), array)
             if((index + 1) == array.length) index = -1
             
-            el.wrapInner("<span class='rotating spin' />").find(".rotating").hide().text(array[index + 1]).show().css({
+            el.wrapInner("<span class='rotating spin' />").find(".rotating").hide().html(array[index + 1]).show().css({
               "-webkit-transform": " rotate(0) scale(1)",
               "-moz-transform": "rotate(0) scale(1)",
               "-o-transform": "rotate(0) scale(1)",
@@ -152,9 +152,9 @@
           
           case 'fade':
             el.fadeOut(settings.speed / 2, function() {
-              index = $.inArray(el.text(), array)
+              index = $.inArray(el.html(), array)
               if((index + 1) == array.length) index = -1
-              el.text(array[index + 1]).fadeIn(settings.speed / 2);
+              el.html(array[index + 1]).fadeIn(settings.speed / 2);
             });
           break;
         }
