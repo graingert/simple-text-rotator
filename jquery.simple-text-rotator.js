@@ -10,8 +10,15 @@
  * https://github.com/peachananr/simple-text-rotator
  *
  * ========================================================== */
-
-!function($){
+(function(factory) {
+  if (typeof exports === "object") {
+    factory(require("jquery"));
+  } else if (typeof define === "function" && define.amd) {
+    define(["jquery"], factory);
+  } else {
+    factory(jQuery);
+  }
+}(function($){
   
   var defaults = {
 		animation: "dissolve",
@@ -163,6 +170,4 @@
     });
   }
   
-}(window.jQuery);
-
-
+}));

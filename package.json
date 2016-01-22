@@ -1,0 +1,22 @@
+{
+  "name": "jquery.simple-text-rotator",
+  "version": "0.0.1",
+  "description": "A light weight jQuery plugin that will allow you to add a super simple rotating text to your website with little to no markup ",
+  "main": "jquery.simple-text-rotator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/peachananr/simple-text-rotator.git"
+  },
+  "author": "Pete R., Founder of BucketListly",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/peachananr/simple-text-rotator/issues"
+  },
+  "homepage": "https://github.com/peachananr/simple-text-rotator#readme",
+  "peerDependecies": {
+     "jquery": ">=1.8"
+  }
+}
